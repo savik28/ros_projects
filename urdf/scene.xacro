@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+<robot name="sensor_table" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find simu)/urdf/kms_40.urdf.xacro"/>
+
+
+<link name="table">
+    <visual>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+        <mesh filename="package://simu/meshes/table.dae"/>
+    </geometry>
+    <material name="DarkGrey"/>
+    </visual>
+</link>
+
+<xacro:kms_40_xacro prefix="sensor" parent="table">
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+</xacro:kms_40_xacro>
+
+<!--link name="sensor">
+
+</link>
+
+<joint name="just" type="fixed">
+    <parent link="table"/>
+    <child link="sensor"/>
+</joint-->
+
+
+</robot>
